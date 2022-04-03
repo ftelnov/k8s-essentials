@@ -9,7 +9,7 @@ sudo apt install curl > /dev/null
 curl -fsSL https://get.docker.com -o get-docker.sh > /dev/null
 sudo sh get-docker.sh
 
-echo "{"exec-opts": ["native.cgroupdriver=systemd"]}" > /etc/docker/daemon.json
+echo "{\"exec-opts\": [\"native.cgroupdriver=systemd\"]}" > /etc/docker/daemon.json
 sudo systemctl restart docker
 
 curl -fsSL https://raw.githubusercontent.com/ftelnov/k8s-essentials/master/startup/kubeadm_install.sh -o get-kubeadm.sh > /dev/null
